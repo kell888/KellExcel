@@ -1,0 +1,14 @@
+E:\后阶段\KellExcel\TestKellExcel\obj\Debug\TestKellExcel.exe
+E:\后阶段\KellExcel\TestKellExcel\obj\Debug\TestKellExcel.pdb
+E:\后阶段\KellExcel\TestKellExcel\bin\Debug\TestKellExcel.exe
+E:\后阶段\KellExcel\TestKellExcel\bin\Debug\TestKellExcel.pdb
+E:\后阶段\KellExcel\TestKellExcel\bin\Debug\KellExcel.dll
+E:\后阶段\KellExcel\TestKellExcel\bin\Debug\Interop.Office.dll
+E:\后阶段\KellExcel\TestKellExcel\bin\Debug\Interop.VBIDE.dll
+E:\后阶段\KellExcel\TestKellExcel\bin\Debug\Interop.Excel.dll
+E:\后阶段\KellExcel\TestKellExcel\bin\Debug\KellExcel.pdb
+E:\后阶段\KellExcel\TestKellExcel\bin\Debug\KellExcel.xml
+E:\后阶段\KellExcel\TestKellExcel\obj\Debug\ResolveAssemblyReference.cache
+E:\后阶段\KellExcel\TestKellExcel\obj\Debug\TestKellExcel.Form1.resources
+E:\后阶段\KellExcel\TestKellExcel\obj\Debug\TestKellExcel.Properties.Resources.resources
+E:\后阶段\KellExcel\TestKellExcel\obj\Debug\TestKellExcel.csproj.GenerateResource.Cache

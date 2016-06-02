@@ -1,0 +1,836 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KellExcel</name>
+    </assembly>
+    <members>
+        <member name="T:KellExcel.ExcelSheetIndex">
+            <summary>
+            Sheet索引
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+        </member>
+        <member name="T:KellExcel.ExcelWriteType">
+            <summary>
+            Excel写入类型
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+        </member>
+        <member name="F:KellExcel.ExcelWriteType.None">
+            <summary>
+            未知的写入类型
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+        </member>
+        <member name="F:KellExcel.ExcelWriteType.ReWrite">
+            <summary>
+            重写
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+        </member>
+        <member name="F:KellExcel.ExcelWriteType.Append">
+            <summary>
+            追加
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+        </member>
+        <member name="F:KellExcel.ExcelWriteType.Insert">
+            <summary>
+            插入
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+        </member>
+        <member name="T:KellExcel.CellIndexs">
+            <summary>
+            单元格行号和列号索引结构
+            </summary>
+        </member>
+        <member name="F:KellExcel.CellIndexs.Row">
+            <summary>
+            从1开始的行号
+            </summary>
+        </member>
+        <member name="F:KellExcel.CellIndexs.Col">
+            <summary>
+            从1开始的列号
+            </summary>
+        </member>
+        <member name="M:KellExcel.CellIndexs.ToString">
+            <summary>
+            将CellIndexs结构转化为可读字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KellExcel.MyExcel">
+            <summary>
+            Excel操作类
+            </summary>
+        </member>
+        <member name="F:KellExcel.MyExcel.MaxSheetCount">
+            <summary>
+            最大Sheet数
+            </summary>
+        </member>
+        <member name="M:KellExcel.MyExcel.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:KellExcel.MyExcel.CreateApp(System.Boolean)">
+            <summary>
+            方法名称： CreateApp
+            内容描述： 实例化Excel对象
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+        </member>
+        <member name="M:KellExcel.MyExcel.FileExteCheck(System.String)">
+            <summary>
+            方法名称： FileExteCheck
+            内容描述： Excel文件扩展名检查
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+            <param name="strpath"></param>
+        </member>
+        <member name="M:KellExcel.MyExcel.Open(System.String,KellExcel.ExcelSheetIndex,System.Boolean,System.Boolean)">
+            <summary>
+            方法名称： Open
+            内容描述： 无
+            实现流程： 打开/连接一个excel数据文档，只能指定一个存在的文件
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.OpenCreate(System.String,KellExcel.ExcelSheetIndex,System.Boolean,System.Boolean)">
+            <summary>
+            方法名称： OpenCreate
+            内容描述： 写文件时，用于文件创建及打开，可以指定不存在的文件
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.IsNumeric(System.String)">
+            <summary>
+            判断是否为数字
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.CellCheck(System.String)">
+            <summary>
+            读写Excel时Cell合法性检查，单元格方式
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+            <param name="strCell"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.CellCheck(System.Int32,System.Int32)">
+            <summary>
+            读写Excel时Cell合法性检查，行，列方式
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+            <param name="iRow"></param>
+            <param name="iCol"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.GetIndexOfChrAndNum(System.String)">
+            <summary>
+            以单元格方式检测表示行的字符串的开始索引
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+            <param name="cell"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.GetCellRow(System.String)">
+            <summary>
+            根据单元格字符串获取行号(1,65536)
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+            <param name="cell"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.GetCellColume(System.String)">
+            <summary>
+            根据单元格字符串获取列号(1,256)
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+            <param name="cell"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.GetCellIndexsByName(System.String)">
+            <summary>
+            根据单元格名获取单元格的行号和列号
+            作    者： KELL
+            日    期： 2008-7-21 15:05:00
+            </summary>
+            <param name="cell">单元格名</param>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.GetCellNameByIndexs(System.Int32,System.Int32)">
+            <summary>
+            根据单元格的行号和列号获取单元格名
+            作    者： KELL
+            日    期： 2008-7-21 15:05:00
+            </summary>
+            <param name="iRow"></param>
+            <param name="iCol"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.GetCellNameByIndexs(KellExcel.CellIndexs)">
+            <summary>
+            根据单元格的行号和列号索引结构获取单元格名
+            作    者： KELL
+            日    期： 2008-7-21 15:05:00
+            </summary>
+            <param name="cellIndexs">单元格的行号和列号索引结构</param>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.GotoNextSheet">
+            <summary>
+            转到下一个Sheet，如果不存在则自动在当前的Sheet后添加一个新的Sheet（最多32个），并且游标的初始位置为A1，即(1, 1)
+            作    者： KELL
+            日    期： 2008-7-21 15:05:00
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.GotoPrevSheet">
+            <summary>
+            转到上一个Sheet，如果不存在则自动在当前的Sheet前插入加一个新的Sheet（最多32个），并且游标的初始位置为A1，即(1, 1)
+            作    者： KELL
+            日    期： 2011-7-19 14:09:00
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.GetUsageCapition">
+            <summary>
+            获取当前工作表已经使用的区域（从1开始的X,Y）
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.GetUsageBottomAndRight">
+            <summary>
+            获取已用区域的最底行索引和最右列索引(从1开始的索引)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.SetAllFont(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Font)">
+            <summary>
+            设置指定范围内所有单元格的字体
+            </summary>
+            <param name="rowBegin"></param>
+            <param name="rowEnd"></param>
+            <param name="colBegin"></param>
+            <param name="colEnd"></param>
+            <param name="font"></param>
+        </member>
+        <member name="M:KellExcel.MyExcel.SetAllRowHeight(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置指定范围内所有单元格的行高
+            </summary>
+            <param name="rowBegin"></param>
+            <param name="rowEnd"></param>
+            <param name="colBegin"></param>
+            <param name="colEnd"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:KellExcel.MyExcel.GetUsageSheetCount">
+            <summary>
+            获取当前Workbook中已经存在了多少个Sheet
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.GetCurrentSheetRowHeight">
+            <summary>
+            获取当前工作表行高
+            作    者： KELL
+            日    期： 2007-8-2 17:10:00
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.GetCurrentSheetColumnWidth">
+            <summary>
+            获取当前工作表列宽
+            作    者： KELL
+            日    期： 2007-8-2 17:10:00
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.GetCurrentSheetIndex">
+            <summary>
+            获取当前待编辑的Sheet索引
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+        </member>
+        <member name="M:KellExcel.MyExcel.GetCurrentSheetName">
+            <summary>
+            获取当前待编辑的Sheet名字
+            作    者： KELL
+            日    期： 2011-2-21
+            </summary>
+        </member>
+        <member name="M:KellExcel.MyExcel.GetSheetName(System.Int32)">
+            <summary>
+            获取当前Workbook中指定索引处的Sheet名字
+            作    者： KELL
+            日    期： 2011-2-21
+            </summary>
+        </member>
+        <member name="M:KellExcel.MyExcel.ExistsSheetIndex(System.Int32)">
+            <summary>
+            判断当前Workbook中是否存在索引index处的Sheet
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.AddAnExternalSheet(System.String)">
+            <summary>
+            在当前的Worksheet之后添加1个外部的Worksheet，有问题！
+            作    者： KELL
+            日    期： 2011-7-19
+            </summary>
+            <param name="externalExcelFile">外部的Excel文件</param>
+        </member>
+        <member name="M:KellExcel.MyExcel.InsertAnExternalSheet(System.String)">
+            <summary>
+            在当前的Worksheet之前插入1个外部的Worksheet，有问题！
+            作    者： KELL
+            日    期： 2011-7-19
+            </summary>
+            <param name="externalExcelFile">外部的Excel文件</param>
+        </member>
+        <member name="M:KellExcel.MyExcel.ReadSheet">
+            <summary>
+            读取当前Excel中的内容
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.ReadSheet(System.String)">
+            <summary>
+            读取当前Excel中的指定Sheet的内容，并以DataTable的形式输出(支持Excel11.0)
+            作    者： KELL
+            日    期： 2011-7-19
+            </summary>
+            <param name="sheetName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.WriteSheet(System.String)">
+            <summary>
+            将指定的字符串写入到指定的excelFile文件中
+            </summary>
+            <param name="dt">要写入的文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.WriteSheet(System.Data.DataTable,System.Int32,System.Boolean)">
+            <summary>
+            将指定的DataTable写入到当前Excel中名字为的sheetName的Sheet中
+            作    者： KELL
+            日    期： 2011-7-19
+            </summary>
+            <param name="dt">只能写入DataTable中的文本</param>
+            <param name="sheetIndex">从1开始的Sheet索引，默认为1</param>
+            <param name="showColumnName">默认为false</param>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.AddSheet">
+            <summary>
+            在当前的Worksheet之前添加1个Sheet
+            作    者： KELL
+            日    期： 2011-2-21
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.AddSheet(System.Int32)">
+            <summary>
+            在当前的Worksheet之前添加count个Sheet
+            作    者： KELL
+            日    期： 2011-2-21
+            </summary>
+            <param name="count">添加Sheet的个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.AddSheetAfter(Excel.Worksheet,System.Int32)">
+            <summary>
+            在当前的Workbook的某个Sheet后面插入count个Sheet
+            作    者： KELL
+            日    期： 2011-2-21
+            </summary>
+            <param name="currentSheet">指定的Worksheet</param>
+            <param name="count">添加Sheet的个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.AddSheetBefore(Excel.Worksheet,System.Int32)">
+            <summary>
+            在当前的Workbook的某个Sheet之前插入count个Sheet
+            作    者： KELL
+            日    期： 2011-2-21
+            </summary>
+            <param name="currentSheet">指定的Worksheet</param>
+            <param name="count">添加Sheet的个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.SetSheetName(System.String)">
+            <summary>
+            设置当前Worksheet的名字
+            作    者： KELL
+            日    期： 2011-2-21
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:KellExcel.MyExcel.SetSheetName(Excel.Worksheet,System.String)">
+            <summary>
+            设置指定Worksheet的名字
+            作    者： KELL
+            日    期： 2011-2-21
+            </summary>
+            <param name="currentSheet">指定的Worksheet</param>
+            <param name="name"></param>
+        </member>
+        <member name="M:KellExcel.MyExcel.SetPrintOrientationHor">
+            <summary>
+            设置当前Sheet为横向打印模式
+            </summary>
+        </member>
+        <member name="M:KellExcel.MyExcel.SetPrintOrientationVer">
+            <summary>
+            设置当前Sheet为纵向打印模式
+            </summary>
+        </member>
+        <member name="M:KellExcel.MyExcel.SetPrintFirstPageAt(System.Int32)">
+            <summary>
+            设置当前Sheet从指定的页码开始打印
+            </summary>
+        </member>
+        <member name="M:KellExcel.MyExcel.SetPrintRangeZoom(System.Int32)">
+            <summary>
+            设置当前Sheet的打印区域为缩放zoom的范围
+            </summary>
+            <param name="zoom">缩放zoom倍，范围：10%~400%</param>
+        </member>
+        <member name="M:KellExcel.MyExcel.SetPrintFitToPagesWidth(System.Int32)">
+            <summary>
+            设置当前Sheet的横向打印区域缩放为pageCount页
+            </summary>
+            <param name="pageCount">页数</param>
+        </member>
+        <member name="M:KellExcel.MyExcel.SetPrintFitToPagesHeight(System.Int32)">
+            <summary>
+            设置当前Sheet的纵向打印区域缩放为pageCount页
+            </summary>
+            <param name="pageCount">页数</param>
+        </member>
+        <member name="M:KellExcel.MyExcel.SetPrintFitToOnePage">
+            <summary>
+            设置当前Sheet的打印区域缩放为1页(包括横向和纵向)
+            </summary>
+        </member>
+        <member name="M:KellExcel.MyExcel.SetPrintFitAllToOnePage">
+            <summary>
+            设置当前Book中所有的Sheet的打印区域缩放为1页(包括横向和纵向)
+            </summary>
+        </member>
+        <member name="M:KellExcel.MyExcel.CopyData(System.Object)">
+            <summary>
+            拷贝对象到剪贴板
+            </summary>
+            <param name="obj">要拷贝的对象</param>
+        </member>
+        <member name="M:KellExcel.MyExcel.CopyHtml(System.String)">
+            <summary>
+            拷贝html文本到剪贴板
+            </summary>
+            <param name="content">html文本</param>
+        </member>
+        <member name="M:KellExcel.MyExcel.Paste">
+            <summary>
+            将剪贴板中的对象粘贴到Excel中
+            </summary>
+        </member>
+        <member name="M:KellExcel.MyExcel.PasteSpecial">
+            <summary>
+            将剪贴板中的对象带格式粘贴到Excel中
+            </summary>
+        </member>
+        <member name="M:KellExcel.MyExcel.PasteHtml">
+            <summary>
+            将剪贴板中的html文本粘贴到Excel中
+            </summary>
+        </member>
+        <member name="M:KellExcel.MyExcel.PrintPreview">
+            <summary>
+            打印预览
+            </summary>
+        </member>
+        <member name="M:KellExcel.MyExcel.GetCurrentCellPosition">
+            <summary>
+            获取当前待编辑的Cell位置(Col, Row)
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+        </member>
+        <member name="M:KellExcel.MyExcel.GetExcelSheetIndexByIndex(System.Int32)">
+            <summary>
+            由数字索引获取ExcelSheetIndex枚举(Col, Row)
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+            <param name="index">从1开始，最大为32，为0时就是当前Sheet</param>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.SetCurrentSheetAt(System.Int32)">
+            <summary>
+            设置当前待编辑的Sheet索引，并激活
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+        </member>
+        <member name="M:KellExcel.MyExcel.SetCurrentCellAt(System.String)">
+            <summary>
+            设置当前待编辑的Cell位置，并激活
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+            <param name="strCell"></param>
+        </member>
+        <member name="M:KellExcel.MyExcel.SetCurrentCellAt(System.Int32,System.Int32)">
+            <summary>
+            设置当前待编辑的Cell位置，并激活
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+        </member>
+        <member name="M:KellExcel.MyExcel.ActiveSheet">
+            <summary>
+            激活Sheet表
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+        </member>
+        <member name="M:KellExcel.MyExcel.ReadCell(System.String)">
+            <summary>
+            方法名称： ReadCell
+            内容描述： 读取某单元格的内容，注意输入单元格的合法性
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+            <param name="strCell"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.ReadCell(System.Int32,System.Int32)">
+            <summary>
+            方法名称： ReadCell
+            内容描述： 读取某单元格内容，按照行列参数读取
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+            <param name="iRow"></param>
+            <param name="iCol"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.WriteCell(System.Int32,System.Int32,System.String)">
+            <summary>
+            方法名称： WriteCell
+            内容描述： 写入数据到某单元格(如果是链接必须先设置好IsLink和LinkFile属性，而LinkSheet、LinkCell、wordLanguage属性则为可选属性，因为它们有默认值Sheet1、A1、SimplifiedChinese)
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+            <param name="iRow"></param>
+            <param name="iCol"></param>
+            <param name="strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.MyExcel.SetPictureToRange(System.String,System.String)">
+            <summary>
+            方法名称： SetPictureToRange
+            内容描述： 写入图片到Range
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+            <param name="strCell"></param>
+            <param name="picFilePath"></param>
+        </member>
+        <member name="M:KellExcel.MyExcel.SetPictureToRange(System.Int32,System.Int32,System.String)">
+            <summary>
+            方法名称： SetPictureToRange
+            内容描述： 写入图片到Range
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+            <param name="iRow"></param>
+            <param name="iCol"></param>
+            <param name="picFilePath"></param>
+        </member>
+        <member name="M:KellExcel.MyExcel.SetPictureToRectangle(System.Drawing.Rectangle,System.String)">
+            <summary>
+            方法名称： SetPictureToRectangle
+            内容描述： 写入图片到Rectangle
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+            <param name="rect"></param>
+            <param name="picFilePath"></param>
+        </member>
+        <member name="M:KellExcel.MyExcel.SaveAs(System.String,Excel.XlFileFormat)">
+            <summary>
+            另存为Excel文件
+            作    者： KELL
+            日    期： 2012-3-10 23:46:00
+            </summary>
+            <param name="savePath">保存路径</param>
+            <param name="format">另存格式，默认为xlExcel7(即Office2003二进制格式)</param>
+        </member>
+        <member name="M:KellExcel.MyExcel.Save">
+            <summary>
+            存储
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+        </member>
+        <member name="M:KellExcel.MyExcel.Close">
+            <summary>
+            资源释放
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+        </member>
+        <member name="M:KellExcel.MyExcel.Dispose">
+            <summary>
+            方法名称： Dispose
+            内容描述： 如果对Excel的操作没有引发异常的话，用这个方法可以正常结束Excel进程
+            否则要用KillExcelProcess()方法来结束Excel进程
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+        </member>
+        <member name="M:KellExcel.MyExcel.Dispose(System.Boolean)">
+            <summary>
+            方法名称： Dispose
+            内容描述： 如果对Excel的操作没有引发异常的话，用这个方法可以正常结束Excel进程
+            否则要用KillExcelProcess()方法来结束Excel进程
+            作    者： KELL
+            日    期： 2011-7-21
+            </summary>
+            <param name="closeApp">是否把Excel.Application也关闭？</param>
+        </member>
+        <member name="M:KellExcel.MyExcel.Close(System.Boolean)">
+            <summary>
+            资源释放
+            作    者： KELL
+            日    期： 2011-7-21
+            </summary>
+            <param name="closeApp">是否把Excel.Application也关闭？</param>
+        </member>
+        <member name="M:KellExcel.MyExcel.KillExcelProcess">
+            <summary>
+            方法名称： KillExcelProcess
+            内容描述： 用Process方法结束Excel进程
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+        </member>
+        <member name="M:KellExcel.MyExcel.KillAllExcelProcess">
+            <summary>
+            关闭所有Excel进程
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+        </member>
+        <member name="M:KellExcel.MyExcel.GetSheetIndexByName(System.String,System.String)">
+            <summary>
+            根据sheet名称获取ExcelSheetIndex对象
+            作    者： KELL
+            日    期： 2011-7-19
+            </summary>
+            <param name="filename"></param>
+            <param name="sheetName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KellExcel.MyExcel.BackColor">
+            <summary>
+            获取或设置背景颜色
+            </summary>
+        </member>
+        <member name="P:KellExcel.MyExcel.ForeColor">
+            <summary>
+            获取或设置字体颜色
+            </summary>
+        </member>
+        <member name="P:KellExcel.MyExcel.Font">
+            <summary>
+            获取或设置字体样式
+            </summary>
+        </member>
+        <member name="P:KellExcel.MyExcel.IsLink">
+            <summary>
+            获取或设置是否为链接
+            </summary>
+        </member>
+        <member name="P:KellExcel.MyExcel.LinkFile">
+            <summary>
+            获取或设置链接的目的Excel文件
+            </summary>
+        </member>
+        <member name="P:KellExcel.MyExcel.LinkSheet">
+            <summary>
+            获取或设置链接的目的工作表
+            </summary>
+        </member>
+        <member name="P:KellExcel.MyExcel.LinkCell">
+            <summary>
+            获取或设置链接的目的单元格
+            </summary>
+        </member>
+        <member name="P:KellExcel.MyExcel.SheetName">
+            <summary>
+            获取或设置Sheet表名称
+            </summary>
+        </member>
+        <member name="P:KellExcel.MyExcel.BackgroundImage">
+            <summary>
+            获取或设置背景图片
+            </summary>
+        </member>
+        <member name="P:KellExcel.MyExcel.SheetIndex">
+            <summary>
+            获取或设置Sheet表索引
+            </summary>
+        </member>
+        <member name="P:KellExcel.MyExcel.WriteType">
+            <summary>
+            获取或设置Excel文件写入类型
+            </summary>
+        </member>
+        <member name="P:KellExcel.MyExcel.FilePath">
+            <summary>
+            获取源文件路径
+            </summary>
+        </member>
+        <member name="P:KellExcel.MyExcel.BeforeTime">
+            <summary>
+            获取打开Excel应用之前的时间
+            </summary>
+        </member>
+        <member name="P:KellExcel.MyExcel.AfterTime">
+            <summary>
+            获取打开Excel应用之后的时间
+            </summary>
+        </member>
+        <member name="P:KellExcel.MyExcel.Application">
+            <summary>
+            获取Excel应用
+            </summary>
+        </member>
+        <member name="P:KellExcel.MyExcel.WorkBook">
+            <summary>
+            获取Excel工作簿
+            </summary>
+        </member>
+        <member name="P:KellExcel.MyExcel.WorkSheet">
+            <summary>
+            获取或设置Excel工作表
+            </summary>
+        </member>
+        <member name="P:KellExcel.MyExcel.TextBox">
+            <summary>
+            获取Excel的TextBox
+            </summary>
+        </member>
+        <member name="P:KellExcel.MyExcel.Range">
+            <summary>
+            获取Excel的Range
+            </summary>
+        </member>
+        <member name="P:KellExcel.MyExcel.IsAppCreate">
+            <summary>
+            判断Excel应用是否已经创建
+            </summary>
+        </member>
+        <member name="P:KellExcel.MyExcel.IsOpen">
+            <summary>
+            判断Excel工作簿或者工作表是否已经打开
+            作    者： KELL
+            日    期： 2007-5-18 18:10:00
+            </summary>
+        </member>
+        <member name="P:KellExcel.MyExcel.PageSetup">
+            <summary>
+            获取当前Sheet的页面设置
+            </summary>
+        </member>
+        <member name="P:KellExcel.MyExcel.PaperSize">
+            <summary>
+            返回或设置纸张的大小
+            </summary>
+        </member>
+        <member name="T:KellExcel.Common">
+            <summary>
+            公用类库
+            </summary>
+        </member>
+        <member name="M:KellExcel.Common.ReadSheet(System.String)">
+            <summary>
+            读取Excel中的内容
+            </summary>
+            <param name="excelFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.Common.WriteSheet(System.String,System.String)">
+            <summary>
+            将指定的字符串写入到指定的excelFile文件中
+            </summary>
+            <param name="dt">要写入的文本</param>
+            <param name="excelFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.Common.ReadSheet(System.String,System.String)">
+            <summary>
+            读取Excel中的指定Sheet的内容，并以DataTable的形式输出(支持Excel11.0)
+            作    者： KELL
+            日    期： 2011-7-19
+            </summary>
+            <param name="excelFile"></param>
+            <param name="sheetName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.Common.WriteSheet(System.Data.DataTable,System.String,System.String,System.Int32,System.Boolean)">
+            <summary>
+            将指定的DataTable写入到指定的excelFile文件中名字为的sheetName的Sheet中
+            作    者： KELL
+            日    期： 2011-7-19
+            </summary>
+            <param name="dt">只能写入DataTable中的文本</param>
+            <param name="excelFile"></param>
+            <param name="sheetIndex">从1开始的Sheet索引，默认为1</param>
+            <param name="showColumnName">默认为false</param>
+            <returns></returns>
+        </member>
+        <member name="M:KellExcel.Common.GetSheetName(System.String,System.Int32)">
+            <summary>
+            根据指定的Excel文件和Sheet索引，获取Sheet名字
+            作    者： KELL
+            日    期： 2011-7-19
+            </summary>
+            <param name="excelFile"></param>
+            <param name="sheetIndex">从1开始的索引值</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

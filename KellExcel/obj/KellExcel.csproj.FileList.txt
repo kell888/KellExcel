@@ -1,0 +1,13 @@
+bin\Debug\KellExcel.dll
+bin\Debug\KellExcel.pdb
+bin\Debug\Interop.Excel.dll
+bin\Debug\Interop.Office.dll
+bin\Debug\Interop.VBIDE.dll
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Interop.Excel.dll
+obj\Debug\Interop.Office.dll
+obj\Debug\Interop.VBIDE.dll
+obj\Debug\KellExcel.csproj.ResolveComReference.cache
+obj\Debug\KellExcel.dll
+obj\Debug\KellExcel.pdb
+bin\Debug\KellExcel.XML

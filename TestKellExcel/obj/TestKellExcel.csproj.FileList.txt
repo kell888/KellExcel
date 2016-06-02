@@ -1,0 +1,13 @@
+bin\Debug\TestKellExcel.exe
+bin\Debug\TestKellExcel.pdb
+bin\Debug\KellExcel.dll
+bin\Debug\Interop.Office.dll
+bin\Debug\Interop.VBIDE.dll
+bin\Debug\Interop.Excel.dll
+bin\Debug\KellExcel.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\TestKellExcel.Form1.resources
+obj\Debug\TestKellExcel.Properties.Resources.resources
+obj\Debug\TestKellExcel.csproj.GenerateResource.Cache
+obj\Debug\TestKellExcel.exe
+obj\Debug\TestKellExcel.pdb

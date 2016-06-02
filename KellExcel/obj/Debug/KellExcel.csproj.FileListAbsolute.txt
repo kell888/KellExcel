@@ -1,0 +1,15 @@
+E:\职业生涯\久乐行\KellExcel\KellExcel\bin\Debug\KellExcel.XML
+E:\职业生涯\久乐行\KellExcel\KellExcel\bin\Debug\KellExcel.dll
+E:\职业生涯\久乐行\KellExcel\KellExcel\bin\Debug\KellExcel.pdb
+E:\职业生涯\久乐行\KellExcel\KellExcel\bin\Debug\Interop.Excel.dll
+E:\职业生涯\久乐行\KellExcel\KellExcel\bin\Debug\Interop.Office.dll
+E:\职业生涯\久乐行\KellExcel\KellExcel\bin\Debug\Interop.VBIDE.dll
+E:\职业生涯\久乐行\KellExcel\KellExcel\obj\Debug\ResolveAssemblyReference.cache
+E:\职业生涯\久乐行\KellExcel\KellExcel\obj\Debug\KellExcel.dll
+E:\职业生涯\久乐行\KellExcel\KellExcel\obj\Debug\KellExcel.pdb
+I:\职业生涯\非常有用的东东\KellExcel\KellExcel\bin\Debug\KellExcel.XML
+I:\职业生涯\非常有用的东东\KellExcel\KellExcel\bin\Debug\KellExcel.dll
+I:\职业生涯\非常有用的东东\KellExcel\KellExcel\bin\Debug\KellExcel.pdb
+I:\职业生涯\非常有用的东东\KellExcel\KellExcel\obj\Debug\ResolveAssemblyReference.cache
+I:\职业生涯\非常有用的东东\KellExcel\KellExcel\obj\Debug\KellExcel.dll
+I:\职业生涯\非常有用的东东\KellExcel\KellExcel\obj\Debug\KellExcel.pdb

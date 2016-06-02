@@ -1,0 +1,12 @@
+E:\后阶段\KellExcel\KellExcel\bin\Debug\KellExcel.dll
+E:\后阶段\KellExcel\KellExcel\bin\Debug\KellExcel.pdb
+E:\后阶段\KellExcel\KellExcel\bin\Debug\Interop.Excel.dll
+E:\后阶段\KellExcel\KellExcel\bin\Debug\Interop.Office.dll
+E:\后阶段\KellExcel\KellExcel\bin\Debug\Interop.VBIDE.dll
+E:\后阶段\KellExcel\KellExcel\obj\Debug\ResolveAssemblyReference.cache
+E:\后阶段\KellExcel\KellExcel\obj\Debug\Interop.Excel.dll
+E:\后阶段\KellExcel\KellExcel\obj\Debug\Interop.Office.dll
+E:\后阶段\KellExcel\KellExcel\obj\Debug\Interop.VBIDE.dll
+E:\后阶段\KellExcel\KellExcel\obj\Debug\KellExcel.csproj.ResolveComReference.cache
+E:\后阶段\KellExcel\KellExcel\obj\Debug\KellExcel.dll
+E:\后阶段\KellExcel\KellExcel\obj\Debug\KellExcel.pdb
